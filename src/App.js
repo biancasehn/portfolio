@@ -14,10 +14,17 @@ import shoppingList from './images/shopping_list.png';
 import dominandoAutocad from './images/dominando_autocad.png';
 
 function App() {
-  
+
+  const unhideProjDesc = () => {
+    // preciso pegar o p irmao do span target e mudar o estilo dele para:
+    // visibility: visible
+    // position?
+  }
+
   return (
     <div className="App">
       
+      {/* NAV BAR */}
       <nav className="nav animateSlideDown">
         <ul>
           <li><a href="#aboutMe">ABOUT ME</a></li>
@@ -26,6 +33,7 @@ function App() {
         </ul>
       </nav>
       
+      {/* HERO */}
       <div className="hero animateSlideDown">
         <div className="heroText">
           <h1>Hi! Nice to see you here!</h1>
@@ -40,7 +48,8 @@ function App() {
         </div>
       </div>
       
-      <div className="aside animateSlideDown">
+      {/* CONTACT LINKS */}
+      <div className="linksBar animateSlideDown">
         <ul>
           <li>
             <a href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/>
@@ -87,20 +96,32 @@ function App() {
         </div>
       </div>
       
-      <div className="section" id="projects">
+      <div className="section">
         <h2 className="sectionTitle">PROJECTS</h2>
-        <div className="projects sectionContent">
+        <div className="projects sectionContent animateSlideDown" id="projects">
           <div className="project">
             <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a> 
-            <p><a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+            <div className="description">
+              <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a>
+              <span onClick={unhideProjDesc}>Face Detector</span>
+              <p>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+            </div>
           </div>
           <div className="project">
             <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer"><img alt="shoppinglist" src={shoppingList}></img></a>
-            <p><a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+            <div className="description">
+              <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a>
+              <span>Shopping List</span>
+              <p>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+            </div>
           </div>
           <div className="project">
             <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer"><img alt="dominandoautocad" src={dominandoAutocad}></img></a>
-            <p><a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+            <div className="description">
+              <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>
+              <span>Landing Page</span>
+              <p>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+            </div>
           </div>
         </div>      
       </div>

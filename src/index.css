@@ -12,13 +12,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-:root{
-  --mainColor: #fff;
-  --primaryFocus: #A43860;
-  --secondaryFocus: rgb(154, 213, 202);
-  --secondaryFocusTranparent: rgba(154, 213, 202, .6);
-  --details:#FF9B71;
-  --lightText: #fff;
-  --darkText: #000000;
-}

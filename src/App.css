@@ -1,3 +1,14 @@
+:root{
+  --mainColor: #fff;
+  --primaryFocus: rgb(163, 56, 95);
+  --primaryFocusTranparent: rgba(163, 56, 95, .7);
+  --secondaryFocus: rgb(154, 213, 202);
+  --secondaryFocusTranparent: rgba(154, 213, 202, .6);
+  --details:#FF9B71;
+  --lightText: #fff;
+  --darkText: #000000;
+}
+
 .App {
   position: relative;
 
@@ -7,20 +18,15 @@
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: var(--darkText);
-
-  transition: 200ms;
-}
-
-a:hover {
-  color: var(--primaryFocus);
-  text-decoration:underline;
-}
-
 li {
   padding: 1em;
+}
+
+a {
+  text-decoration: underline;
+  color: var(--primaryFocus);
+
+  cursor:pointer;
 }
 
 /* NAV */
@@ -28,15 +34,26 @@ li {
 .nav ul {
   list-style-type: none;
   font-size: .9em;
-
+  
   margin-bottom: 0;
   padding: 1em 8.5em;
-
+  
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
 
+.nav a {
+  text-decoration: none;
+  color: var(--darkText);
+
+  transition: 200ms;
+}
+
+.nav a:hover {
+  color: var(--primaryFocus);
+  text-decoration:underline;
+}
 
 /* HERO */
 
@@ -65,13 +82,6 @@ li {
   line-height:1.7;
 }
 
-.heroText a {
-  text-decoration: underline;
-  color: var(--primaryFocus);
-
-  cursor:pointer;
-}
-
 .learnMore {
   text-align: center;
 }
@@ -96,7 +106,7 @@ li {
 
 /* ASIDE */
 
-.aside {
+.linksBar {
   position: fixed;
 
   z-index: 9999999;
@@ -109,7 +119,7 @@ li {
   transition: all .3s;
 }
 
-.aside ul {
+.linksBar ul {
   list-style-type: none;
   padding: 0;
   display:block;
@@ -117,14 +127,14 @@ li {
 
 /* ICONS ASIDE */
 
-.aside .icons {
+.linksBar .icons {
   font-size: 2em;
   color: black;
 
   transition: all 0.2s;
 }
 
-.aside .icons:hover {
+.linksBar .icons:hover {
   color: var(--details);
   transform: scale(1.2);
 }
@@ -203,7 +213,9 @@ li {
 }
 
 .projects .project a {
-  padding: .5em 2em;
+  text-align: normal;
+  font-size: 1.1em;
+  padding: 1em 0;
 }
 
 .projects img {
@@ -220,9 +232,10 @@ li {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15%);
 }
 
-.projects .project p {
+.projects .project .description {
   padding: 2em;
 }
+
 
 /* FOOTER */
 
@@ -290,7 +303,6 @@ footer p {
   
     .projects .project p {
       padding: 0 1em 1em 1em;
-      text-align: justify;
     }
 }
 
@@ -302,11 +314,13 @@ footer p {
     padding-bottom: 151px;
   }
 
+  /* NAV */
   .nav ul {
   justify-content: center;
   padding: 1em 2em;
   }
 
+  /* HERO */
   .hero {
   align-items: center;
   padding: 0 5.5em 5.5em;
@@ -326,6 +340,38 @@ footer p {
   .learnMore {
     visibility: hidden;
   }
+
+  /* LINKS BAR */
+
+  .linksBar {
+    font-size: 1.4em;
+
+    background: hsl(169, 41%, 72%, 0.8);
+    border-radius: 5px 5px 0 0;
+
+    position: fixed;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .linksBar ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .linksBar .icons:active {
+    color: var(--details);
+  }
+
+  /* SECTION */
 
   .section {
     position:relative;
@@ -354,37 +400,49 @@ footer p {
     padding: 1em 0 0 0;
   }
 
+  /* TECHNOLOGIES */
+
   .techs .tech {
     max-width: 100%;
   }
 
-  .aside {
-    font-size: 1.4em;
+  /* PROJECTS */
 
-    background: hsl(169, 41%, 72%, 0.8);
-    border-radius: 5px 5px 0 0;
-
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    right: 0;
-    left: 0;
+  .projects .project {
+    position: relative;
   }
 
-  .aside ul {
-    margin: 0;
+  .projects .project img {
+    border-radius: 0px;
+  }
+
+  .projects .project .description {
     padding: 0;
 
-    list-style-type: none;
-    
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .aside .icons:active {
-    color: var(--details);
+  .project .description span {
+    padding: .5em;
+    width: 189px;
+
+    position: absolute;
+    bottom: 18px;
+
+    text-decoration: none;
+    background-color: var(--primaryFocusTranparent);
+    color: var(--lightText);
+    cursor: pointer;
   }
+  
+  .project .description p, .project .description a {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  /* FOOTER */
 
   footer {
     position: absolute;
@@ -421,10 +479,10 @@ footer p {
     transform: translateY(0)
   }
 }
-
-/* .animateExpand {
+/* 
+.animateExpand {
   transform: translateY(-35px);
-  animation: slideDown 500ms forwards;
+  animation: expand 500ms forwards;
 }
 
 @keyframes expand {
