@@ -65,6 +65,13 @@ li {
   line-height:1.7;
 }
 
+.heroText a {
+  text-decoration: underline;
+  color: var(--primaryFocus);
+
+  cursor:pointer;
+}
+
 .learnMore {
   text-align: center;
 }
@@ -280,11 +287,6 @@ footer p {
       float: none;
       padding: 0;
     }
-
-    /* .projects .project {
-      border: 1px solid #dadce0;
-      border-radius: 20px;
-    } */
   
     .projects .project p {
       padding: 0 1em 1em 1em;

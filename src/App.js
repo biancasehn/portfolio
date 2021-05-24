@@ -34,7 +34,6 @@ function App() {
           </h2>
           {/* <img alt="CV">Download my CV</img> */}
           <a>Download my CV</a>
-
         </div>
         <div className="learnMore">
             <a href="#aboutMe">< MdExpandMore /></a>
