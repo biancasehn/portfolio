@@ -30,9 +30,11 @@ function App() {
         <div className="heroText">
           <h1>Hi! Nice to see you here!</h1>
           <h2>
-            I’m Bianca Sehn, a web developer passionate about creating designs and building web applications. Currently based in Budapest, Hungary, but open for new adventures.
+            I’m <span style={{color:"var(--primaryFocus)", fontSize:"1.2em", fontWeight:"bold"}}>Bianca Sehn</span>, a web developer passionate about creating designs and building web applications. Currently based in Budapest, Hungary, but open for new adventures.
           </h2>
-          <p>Download my CV here</p>
+          {/* <img alt="CV">Download my CV</img> */}
+          <a>Download my CV</a>
+
         </div>
         <div className="expandMore">
             <a href="#aboutMe">< MdExpandMore /></a>
@@ -82,7 +84,7 @@ function App() {
           <h1>< Nextjs style={{maxWidth:"1.5em", maxHeight:"1.5em"}}/></h1>
           <h1>< FaGitAlt style={{color:"#F1502F"}}/></h1>
           <h1>< FaNode style={{color:"#68A063"}}/></h1>
-          <h1>< Expressjs style={{maxWidth:"1.5em", maxHeight:"1.5em"}}/></h1>
+          <h1>< Expressjs style={{maxWidth:"1.2em", maxHeight:"1.5em"}}/></h1>
         </div>
       </div>
       
@@ -90,16 +92,16 @@ function App() {
         <h2 className="sectionTitle">PROJECTS</h2>
         <div className="projects sectionContent">
           <div className="project">
-            <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a>
-            <p>Face Detector <br />Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+            <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a> 
+            <p><a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
           </div>
           <div className="project">
             <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer"><img alt="shoppinglist" src={shoppingList}></img></a>
-            <p>Shopping List <br />Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+            <p><a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
           </div>
           <div className="project">
             <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer"><img alt="dominandoautocad" src={dominandoAutocad}></img></a>
-            <p>Landing Page - Dominando AutoCAD <br />AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+            <p><a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
           </div>
         </div>      
       </div>
