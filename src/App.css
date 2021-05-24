@@ -50,7 +50,7 @@ li {
   align-items: left;
   justify-content: center;
 
-  padding: 1em 10em 2em;
+  padding: 1em 8em 2em;
 
   text-align: justify;
   line-height: 2.3em;
@@ -65,23 +65,25 @@ li {
   line-height:1.7;
 }
 
-.expandMore {
+.learnMore {
   text-align: center;
-  font-size: 2em;
 }
 
-.expandMore svg {
+.learnMore svg {
   position: absolute;
   bottom: 2em;
+
+  font-size: 2em;
 
   color: var(--primaryFocus);
   box-shadow: 1px 1px 2px 1px;
   border-radius: 10px;
 
-  transition: all .2s;
+  transition: all 200ms;
 }
 
-.expandMore svg:hover {
+
+.learnMore svg:hover {
   transform: translateY(10px);
 }
 
@@ -98,10 +100,6 @@ li {
   border-radius: 10px;
 
   transition: all .3s;
-}
-
-.aside:hover {
-  transform: scale(1.2);
 }
 
 .aside ul {
@@ -180,6 +178,8 @@ li {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  max-width: 60%;
 }
 
 .techs .tech h1 {
@@ -244,11 +244,11 @@ footer p {
   }
 
   .hero {
-    margin-left: 8%;
+    margin-left: 7%;
   }
   
   .heroText {
-    max-width: min(60%, 700px);
+    max-width: min(55%, 700px);
   }
   
   .hero h2 {
@@ -281,10 +281,10 @@ footer p {
       padding: 0;
     }
 
-    .projects .project {
+    /* .projects .project {
       border: 1px solid #dadce0;
       border-radius: 20px;
-    }
+    } */
   
     .projects .project p {
       padding: 0 1em 1em 1em;
@@ -321,7 +321,7 @@ footer p {
     line-height:1.7;
   }
 
-  .expandMore {
+  .learnMore {
     visibility: hidden;
   }
 
@@ -350,6 +350,10 @@ footer p {
     width: auto;
     text-align: justify;
     padding: 1em 0 0 0;
+  }
+
+  .techs .tech {
+    max-width: 100%;
   }
 
   .aside {
@@ -402,16 +406,30 @@ footer p {
   }
 }
 
-.animateExpand {
+.animateSlideDown {
   transform: translateY(-35px);
-  animation: expand 500ms forwards;
+  animation: slideDown 500ms forwards;
 }
 
-@keyframes expand {
-  from {
+@keyframes slideDown {
+  0% {
     transform: translateY(-35px)
   }
-  to {
+  100% {
     transform: translateY(0)
   }
 }
+
+/* .animateExpand {
+  transform: translateY(-35px);
+  animation: slideDown 500ms forwards;
+}
+
+@keyframes expand {
+  0% {
+    transform: translateY(-35px)
+  }
+  100% {
+    transform: translateY(0)
+  }
+} */

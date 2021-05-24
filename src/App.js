@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       
-      <nav className="nav animateExpand">
+      <nav className="nav animateSlideDown">
         <ul>
           <li><a href="#aboutMe">ABOUT ME</a></li>
           <li><a href="#technologies">TECHNOLOGIES</a></li>
@@ -26,7 +26,7 @@ function App() {
         </ul>
       </nav>
       
-      <div className="hero animateExpand">
+      <div className="hero animateSlideDown">
         <div className="heroText">
           <h1>Hi! Nice to see you here!</h1>
           <h2>
@@ -36,12 +36,12 @@ function App() {
           <a>Download my CV</a>
 
         </div>
-        <div className="expandMore">
+        <div className="learnMore">
             <a href="#aboutMe">< MdExpandMore /></a>
         </div>
       </div>
       
-      <div className="aside animateExpand">
+      <div className="aside animateSlideDown">
         <ul>
           <li>
             <a href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/>
