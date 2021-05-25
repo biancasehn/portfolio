@@ -1,8 +1,8 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 //ICONS
-import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode, FaExternalLinkAlt } from 'react-icons/fa';
 import { MdEmail, MdExpandMore } from 'react-icons/md';
 import { SiJavascript } from 'react-icons/si';
 import {ReactComponent as Nextjs} from './nextjs-3.svg'
@@ -114,9 +114,9 @@ function App() {
               <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setFirstDescription(!firstDescription)}}>
                 Face Detector
-                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+                < MdExpandMore className={firstDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
-              <p className={firstDescription ? "text transform textActive" : "text transform"}>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+              <p className={firstDescription ? "text transformText textActive" : "text transform"}>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
             </div>
           </div>
 
@@ -127,9 +127,9 @@ function App() {
               <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setSecondDescription(!secondDescription)}}>
                  Shopping List
-                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+                < MdExpandMore className={secondDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
-              <p className={secondDescription ? "text transform textActive" : "text transform"}>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+              <p className={secondDescription ? "text transformText textActive" : "text transform"}>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
             </div>
           </div>
 
@@ -145,10 +145,13 @@ function App() {
               <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
               <span onClick={()=>{setThirdDescription(!thirdDescription)}}>
                 Landing Page
-                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+                < MdExpandMore className={thirdDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
               
-              <p className={thirdDescription ? "text transform textActive" : "text transform"}>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+              <p className={thirdDescription ? "text transformText textActive" : "text"}>
+                AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course. 
+                {/* <a style={{visibility:"visible", fontSize:"1.4em"}} href="https://dominandoautocad.com/">< FaExternalLinkAlt /></a> */}
+              </p>
             </div>
           </div>
 
