@@ -218,7 +218,7 @@ a {
   padding: 1em 0;
 }
 
-.projects img {
+.projects .project img {
   width: 200px;
   border-radius: 20px;
   border: 1px solid #dadce0;
@@ -428,7 +428,7 @@ footer p {
     align-items: center;
   }
 
-  .project .description a {
+  .project .description .titleAnchor {
     position: absolute;
     visibility: hidden;
   }
@@ -469,10 +469,6 @@ footer p {
     margin-top: 0;
 
     transform: translateY(-20px);
-
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-end;
   }
 
   .transformText {
@@ -491,6 +487,15 @@ footer p {
 
     border: solid 1px #dadce0;
     border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects .project .textActive a {
+    font-size: 1.4em;
+    padding: 0 1em;
+    text-align: right;
   }
 
   /* FOOTER */
@@ -505,6 +510,7 @@ footer p {
 
     background: var(--primaryFocus);
     color: var(--lightText);
+    
   }
 }
 

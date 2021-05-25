@@ -111,12 +111,15 @@ function App() {
           <div className="project">
             <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a> 
             <div className="description">
-              <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
+              <a className="titleAnchor" href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setFirstDescription(!firstDescription)}}>
                 Face Detector
                 < MdExpandMore className={firstDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
-              <p className={firstDescription ? "text transformText textActive" : "text transform"}>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+              <div className={firstDescription ? "text transformText textActive" : "text transform"}>
+                <p>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+                <a href="https://facedetector.vercel.app/">< FaExternalLinkAlt /></a>
+              </div>
             </div>
           </div>
 
@@ -124,34 +127,36 @@ function App() {
           <div className="project">
             <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer"><img alt="shoppinglist" src={shoppingList}></img></a>
             <div className="description">
-              <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
+              <a className="titleAnchor" href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setSecondDescription(!secondDescription)}}>
                  Shopping List
                 < MdExpandMore className={secondDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
-              <p className={secondDescription ? "text transformText textActive" : "text transform"}>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+              <div className={secondDescription ? "text transformText textActive" : "text transform"}>
+                <p>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list.</p>
+                <a href="https://shoppinglist-application.herokuapp.com/">< FaExternalLinkAlt /></a>
+              </div>
             </div>
           </div>
 
           {/* PROJECT THREE */}
           <div className="project">
-            <a
-              href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">
+            <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">
               <img 
                 alt="dominandoautocad" src={dominandoAutocad}>
               </img>
             </a>
             <div className="description">
-              <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
+              <a  className="titleAnchor" href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
               <span onClick={()=>{setThirdDescription(!thirdDescription)}}>
                 Landing Page
                 < MdExpandMore className={thirdDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
               
-              <p className={thirdDescription ? "text transformText textActive" : "text"}>
-                AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course. 
-                {/* <a style={{visibility:"visible", fontSize:"1.4em"}} href="https://dominandoautocad.com/">< FaExternalLinkAlt /></a> */}
-              </p>
+              <div className={thirdDescription ? "text transformText textActive" : "text"}>
+                <p>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+                <a href="https://dominandoautocad.com/">< FaExternalLinkAlt /></a>
+              </div>
             </div>
           </div>
 
