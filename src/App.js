@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 
 //ICONS
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode } from 'react-icons/fa';
@@ -14,12 +15,10 @@ import shoppingList from './images/shopping_list.png';
 import dominandoAutocad from './images/dominando_autocad.png';
 
 function App() {
-
-  const unhideProjDesc = () => {
-    // preciso pegar o p irmao do span target e mudar o estilo dele para:
-    // visibility: visible
-    // position?
-  }
+  
+  const [firstDescription, setFirstDescription] = useState(false);
+  const [secondDescription, setSecondDescription] = useState(false);
+  const [thirdDescription, setThirdDescription] = useState(false);
 
   return (
     <div className="App">
@@ -52,17 +51,24 @@ function App() {
       <div className="linksBar animateSlideDown">
         <ul>
           <li>
-            <a href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/>
+            <a 
+            href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/>
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/bianca-sehn-95b72b140/" target="_blank" rel="noreferrer"><FaLinkedin className="icons"/>
+            <a 
+            href="https://www.linkedin.com/in/bianca-sehn-95b72b140/" target="_blank" rel="noreferrer"><FaLinkedin className="icons"/>
             </a>
           </li>
-          <li><a href="mailto:bianca_sehn@hotmail.com" target="_blank" rel="noreferrer"><MdEmail className="icons"/></a></li>
+          <li>
+            <a 
+            href="mailto:bianca_sehn@hotmail.com" target="_blank" rel="noreferrer"><MdEmail className="icons"/>
+            </a>
+          </li>
         </ul>
       </div>
       
+      {/* ABOUT ME SECTION */}
       <div className="section aboutMe" id="aboutMe">
         <h2 className="sectionTitle">ABOUT ME</h2>
         <div className="sectionContent">
@@ -75,13 +81,13 @@ function App() {
           <h3>
             I love to learn new stuff and I spend most of my free time studying web development, designing and building applications.
           </h3>  
-          <h3>  
+          <h3>
             When I am not studying, you can probably find me watching movies or planning my next trip.
           </h3>
         </div>
-        
       </div>
-      
+
+      {/* TECHNOLOGIES SECTION */}
       <div className="section techs" id="technologies">
         <h2 className="sectionTitle">TECHNOLOGIES</h2>
         <div className="sectionContent tech">
@@ -96,36 +102,61 @@ function App() {
         </div>
       </div>
       
+      {/* PROJECTS SECTION */}
       <div className="section">
         <h2 className="sectionTitle">PROJECTS</h2>
-        <div className="projects sectionContent animateSlideDown" id="projects">
+        <div className="projects sectionContent" id="projects">
+
+          {/* PROJECT ONE */}
           <div className="project">
             <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a> 
             <div className="description">
-              <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a>
-              <span onClick={unhideProjDesc}>Face Detector</span>
-              <p>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
+              <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
+              <span onClick={()=>{setFirstDescription(!firstDescription)}}>
+                Face Detector
+                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+              </span> {/* SMALLER SCREENS */}
+              <p className={firstDescription ? "text transform textActive" : "text transform"}>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
             </div>
           </div>
+
+          {/* PROJECT TWO */}
           <div className="project">
             <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer"><img alt="shoppinglist" src={shoppingList}></img></a>
             <div className="description">
-              <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a>
-              <span>Shopping List</span>
-              <p>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
+              <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
+              <span onClick={()=>{setSecondDescription(!secondDescription)}}>
+                 Shopping List
+                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+              </span> {/* SMALLER SCREENS */}
+              <p className={secondDescription ? "text transform textActive" : "text transform"}>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list. </p>
             </div>
           </div>
+
+          {/* PROJECT THREE */}
           <div className="project">
-            <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer"><img alt="dominandoautocad" src={dominandoAutocad}></img></a>
+            <a
+              href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">
+              <img 
+                alt="dominandoautocad" src={dominandoAutocad}>
+              </img>
+            </a>
             <div className="description">
-              <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>
-              <span>Landing Page</span>
-              <p>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
+              <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
+              <span onClick={()=>{setThirdDescription(!thirdDescription)}}>
+                Landing Page
+                < MdExpandMore style={{fontSize:"1.5em", marginLeft:"10px"}}/>
+              </span> {/* SMALLER SCREENS */}
+              
+              <p className={thirdDescription ? "text transform textActive" : "text transform"}>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
             </div>
           </div>
-        </div>      
+
+        </div>
+
       </div>
-  
+
+      {/* FOOTER */}
       <footer>
         <p>Designed and developed</p>
         <p>by Bianca Sehn</p>
