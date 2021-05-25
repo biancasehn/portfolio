@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.2052bb61.chunk.css",
-    "main.js": "/portfolio/static/js/main.1a26dc3b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.1a26dc3b.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.ee7ef892.chunk.css",
+    "main.js": "/portfolio/static/js/main.669cf7a8.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.669cf7a8.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.6ccb3e03.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.6ccb3e03.js.map",
-    "static/js/2.ea4920d8.chunk.js": "/portfolio/static/js/2.ea4920d8.chunk.js",
-    "static/js/2.ea4920d8.chunk.js.map": "/portfolio/static/js/2.ea4920d8.chunk.js.map",
+    "static/js/2.e5a108b6.chunk.js": "/portfolio/static/js/2.e5a108b6.chunk.js",
+    "static/js/2.e5a108b6.chunk.js.map": "/portfolio/static/js/2.e5a108b6.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.2052bb61.chunk.css.map": "/portfolio/static/css/main.2052bb61.chunk.css.map",
-    "static/js/2.ea4920d8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ea4920d8.chunk.js.LICENSE.txt",
+    "static/css/main.ee7ef892.chunk.css.map": "/portfolio/static/css/main.ee7ef892.chunk.css.map",
+    "static/js/2.e5a108b6.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e5a108b6.chunk.js.LICENSE.txt",
     "static/media/dominando_autocad.c19ad436.png": "/portfolio/static/media/dominando_autocad.c19ad436.png",
     "static/media/express-109.75fff9be.svg": "/portfolio/static/media/express-109.75fff9be.svg",
     "static/media/face_detector.0fdc8dd5.png": "/portfolio/static/media/face_detector.0fdc8dd5.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.6ccb3e03.js",
-    "static/js/2.ea4920d8.chunk.js",
-    "static/css/main.2052bb61.chunk.css",
-    "static/js/main.1a26dc3b.chunk.js"
+    "static/js/2.e5a108b6.chunk.js",
+    "static/css/main.ee7ef892.chunk.css",
+    "static/js/main.669cf7a8.chunk.js"
   ]
 }
