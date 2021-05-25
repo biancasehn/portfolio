@@ -114,7 +114,7 @@ function App() {
               <a className="titleAnchor" href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setFirstDescription(!firstDescription)}}>
                 Face Detector
-                < MdExpandMore className={firstDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
+                < MdExpandMore className={firstDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
               <div className={firstDescription ? "text transformText textActive" : "text transform"}>
                 <p>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
@@ -130,7 +130,7 @@ function App() {
               <a className="titleAnchor" href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
               <span onClick={()=>{setSecondDescription(!secondDescription)}}>
                  Shopping List
-                < MdExpandMore className={secondDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
+                < MdExpandMore className={secondDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
               <div className={secondDescription ? "text transformText textActive" : "text transform"}>
                 <p>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list.</p>
@@ -150,7 +150,7 @@ function App() {
               <a  className="titleAnchor" href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
               <span onClick={()=>{setThirdDescription(!thirdDescription)}}>
                 Landing Page
-                < MdExpandMore className={thirdDescription ? "expandProject transformText rotateExpand" : "expandProject transformText"}/>
+                < MdExpandMore className={thirdDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
               </span> {/* SMALLER SCREENS */}
               
               <div className={thirdDescription ? "text transformText textActive" : "text"}>

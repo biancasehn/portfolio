@@ -146,7 +146,7 @@ a {
   flex-direction: row;
   align-items: right;
 
-  min-height: 60vh;
+ 
   padding: 2em 10em 2em 6em;
 }
 
@@ -187,7 +187,7 @@ a {
 
 /* TECHNOLOGIES */
 
-.techs .tech {
+.tech {
   line-height: 0;
   font-size: 2em;
 
@@ -199,26 +199,25 @@ a {
   max-width: 60%;
 }
 
-.techs .tech h1 {
+.tech h1 {
   padding: 0 .1em;
   margin: 0.3em;
 }
 
 /* PROJECTS */
 
-.projects .project {
+.project {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 
-.projects .project a {
-  text-align: normal;
+.project a {
   font-size: 1.1em;
   padding: 1em 0;
 }
 
-.projects .project img {
+.project img {
   width: 200px;
   border-radius: 20px;
   border: 1px solid #dadce0;
@@ -232,14 +231,21 @@ a {
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15%);
 }
 
-.projects .project .description {
+.project .description {
   padding: 2em;
 }
 
-.projects .project .description span {
+.project .description span {
   visibility: hidden;
+  position: absolute;
+  top: -999999;
+  left: -99999;
 }
 
+.project .text a {
+  visibility: hidden;
+  position: absolute
+}
 
 /* FOOTER */
 
@@ -292,24 +298,31 @@ footer p {
     padding: 2em 6em;
   }
   
-    /* CHANGING EACH PROJECT TO COLUMN DIRECTION */
-    .projects .project, .aboutMe .sectionContent {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      text-align: center;
-    }
+  /* CHANGING EACH PROJECT TO COLUMN DIRECTION */
+  .project, .project .description, .aboutMe .sectionContent {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: left;
+    justify-content: center;
+  }
 
-    .myPhoto {
-      float: none;
-      padding: 0;
-    }
-  
-    .projects .project p {
-      padding: 0 1em 1em 1em;
-    }
+  .project, .project .description, .project p, .project .titleAnchor {
+    padding: 0 1em 0 0;
+    max-width: 400px;
+    margin-top: 0;
+  }
+
+  .aboutMe .sectionContent {
+    padding-right: 1.6em;
+  }
+
+  .myPhoto {
+    float: none;
+    text-align: center;
+    padding: 0;
+  }
 }
-
 /* MOBILE SCREENS - SMALLER THAN 769px */
 
 @media (max-width:769px) {
@@ -406,21 +419,22 @@ footer p {
 
   /* TECHNOLOGIES */
 
-  .techs .tech {
+  .tech {
     max-width: 100%;
   }
 
   /* PROJECTS */
 
-  .projects .project {
+  .project {
     position: relative;
+    text-align: center;
   }
 
-  .projects .project img {
+  .project img {
     border-radius: 0px;
   }
 
-  .projects .project .description {
+  .project .description {
     padding: 0;
 
     display: flex;
@@ -431,16 +445,18 @@ footer p {
   .project .description .titleAnchor {
     position: absolute;
     visibility: hidden;
+    top: 99999;
+    left: 99999999;
   }
   
-  .projects .project .description span {
+  .project .description span {
     visibility: visible;
 
     padding: .5em;
-    width: 190px;
+    width: 187px;
 
     position: relative;
-    bottom: 19px;
+    bottom: 23px;
 
     text-decoration: none;
     background-color: var(--primaryFocusTranparent);
@@ -452,12 +468,12 @@ footer p {
     justify-content: space-between;
   }
 
-  .expandProject  {
+  .chevronProject  {
     font-size: 1.5em;
     transform: rotate(0deg);
   }
 
-  .rotateExpand {
+  .rotate{
     transform: rotate(180deg);
   }
 
@@ -490,12 +506,20 @@ footer p {
 
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
 
-  .projects .project .textActive a {
+  .textActive p {
+    padding: 1em;
+    margin: 0;
+  }
+
+  .project .textActive a {
+    position: relative;
+    visibility: visible;
     font-size: 1.4em;
-    padding: 0 1em;
-    text-align: right;
+    padding: 0 .8em;
   }
 
   /* FOOTER */
@@ -521,7 +545,16 @@ footer p {
     padding-bottom: 121px;
     font-size: 12px;
   }
+
+  .project .description span {
+    width: 189px;
+  
+    position: relative;
+    bottom: 19px;
+  }
 }
+
+
 
 .animateSlideDown {
   transform: translateY(-35px);
@@ -536,17 +569,3 @@ footer p {
     transform: translateY(0)
   }
 }
-/* 
-.animateExpand {
-  transform: translateY(-35px);
-  animation: expand 500ms forwards;
-}
-
-@keyframes expand {
-  0% {
-    transform: translateY(-35px)
-  }
-  100% {
-    transform: translateY(0)
-  }
-} */
