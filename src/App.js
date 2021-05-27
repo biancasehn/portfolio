@@ -1,5 +1,5 @@
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 //ICONS
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode, FaExternalLinkAlt } from 'react-icons/fa';
@@ -16,9 +16,44 @@ import dominandoAutocad from './images/dominando_autocad.png';
 
 function App() {
   
-  const [firstDescription, setFirstDescription] = useState(false);
-  const [secondDescription, setSecondDescription] = useState(false);
-  const [thirdDescription, setThirdDescription] = useState(false);
+  const projects = [
+    {
+      name: "Face Detector",
+      link: "https://facedetector.vercel.app/",
+      image: faceDetector,
+      description: "Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.",
+      techs: ["Nextjs", "Nodejs", "Express", "Postgres", ]
+    },
+    {
+      name: "Shopping List",
+      link: "https://shoppinglist-application.herokuapp.com/",
+      image: shoppingList,
+      description: "Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list.",
+      techs: ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "SQLite", ]
+    },
+    {
+      name: "Landing Page",
+      link: "https://dominandoautocad.com/",
+      image: dominandoAutocad,
+      description: "AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.",
+      techs: ["React", "CSS"]
+    },
+  ]
+
+  const [displayDescription, setDisplayDescription] = useState({
+    0:false,
+    1:false,
+    2:false
+  });
+
+  const handleDescription = (event) => {
+    const id = Number(event.target.id)
+    setDisplayDescription({
+      ...displayDescription,
+      [id]: !displayDescription[id]
+    })
+  }
+   
 
   return (
     <div className="App">
@@ -41,9 +76,6 @@ function App() {
           </h2>
           {/* <img alt="CV">Download my CV</img> */}
           <a>Download my CV</a>
-        </div>
-        <div className="learnMore">
-            <a href="#aboutMe">< MdExpandMore /></a>
         </div>
       </div>
       
@@ -77,11 +109,11 @@ function App() {
           </div>
           <h3>
             I am a Brazilian self-taught web developer with background in Electrical Engineering, that rediscovered her passion about programming during the pandemic.
-          </h3>
-          <h3>
+            <br/>
+            <br/>
             I love to learn new stuff and I spend most of my free time studying web development, designing and building applications.
-          </h3>  
-          <h3>
+            <br/>
+            <br/>
             When I am not studying, you can probably find me watching movies or planning my next trip.
           </h3>
         </div>
@@ -107,61 +139,30 @@ function App() {
         <h2 className="sectionTitle">PROJECTS</h2>
         <div className="projects sectionContent" id="projects">
 
-          {/* PROJECT ONE */}
-          <div className="project">
-            <a href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer"><img alt="facedetector" src={faceDetector}></img></a> 
-            <div className="description">
-              <a className="titleAnchor" href="https://facedetector.vercel.app/" target="_blank" rel="noreferrer">Face Detector</a> {/* LARGER SCREENS */}
-              <span onClick={()=>{setFirstDescription(!firstDescription)}}>
-                Face Detector
-                < MdExpandMore className={firstDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
-              </span> {/* SMALLER SCREENS */}
-              <div className={firstDescription ? "text transformText textActive" : "text transform"}>
-                <p>Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.</p>
-                <a href="https://facedetector.vercel.app/">< FaExternalLinkAlt /></a>
+          {projects.map((project, i) => (
+            <div className="project" key={i}>
+              <a href={project.link} target="_blank" rel="noreferrer"><img alt="facedetector" src={project.image}></img></a> 
+              <div className="description">
+                <a className="titleAnchor" href={project.link} target="_blank" rel="noreferrer">{project.name}</a> 
+                <span class="titleButton" id={i} onClick={handleDescription}>
+                {project.name}
+                < MdExpandMore className={displayDescription[i] ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
+                </span>
+                <div className={displayDescription[i] ? "text transformText textActive" : "text transform"}>
+                  <p>{project.description}</p>
+                  <div className="projTechs">
+                    {project.techs.map((tech, i) => (
+                      <span key={i}>
+                        {tech}
+                      </span>
+                  ))}
+                  </div>
+                  <a href={project.link}>< FaExternalLinkAlt /></a>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* PROJECT TWO */}
-          <div className="project">
-            <a href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer"><img alt="shoppinglist" src={shoppingList}></img></a>
-            <div className="description">
-              <a className="titleAnchor" href="https://shoppinglist-application.herokuapp.com/" target="_blank" rel="noreferrer">Shopping List</a> {/* LARGER SCREENS */}
-              <span onClick={()=>{setSecondDescription(!secondDescription)}}>
-                 Shopping List
-                < MdExpandMore className={secondDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
-              </span> {/* SMALLER SCREENS */}
-              <div className={secondDescription ? "text transformText textActive" : "text transform"}>
-                <p>Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list.</p>
-                <a href="https://shoppinglist-application.herokuapp.com/">< FaExternalLinkAlt /></a>
-              </div>
-            </div>
-          </div>
-
-          {/* PROJECT THREE */}
-          <div className="project">
-            <a href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">
-              <img 
-                alt="dominandoautocad" src={dominandoAutocad}>
-              </img>
-            </a>
-            <div className="description">
-              <a  className="titleAnchor" href="https://dominandoautocad.com/" target="_blank" rel="noreferrer">Landing Page</a>{/* LARGER SCREENS */}
-              <span onClick={()=>{setThirdDescription(!thirdDescription)}}>
-                Landing Page
-                < MdExpandMore className={thirdDescription ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
-              </span> {/* SMALLER SCREENS */}
-              
-              <div className={thirdDescription ? "text transformText textActive" : "text"}>
-                <p>AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.</p>
-                <a href="https://dominandoautocad.com/">< FaExternalLinkAlt /></a>
-              </div>
-            </div>
-          </div>
-
+          ))}
         </div>
-
       </div>
 
       {/* FOOTER */}

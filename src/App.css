@@ -82,28 +82,6 @@ a {
   line-height:1.7;
 }
 
-.learnMore {
-  text-align: center;
-}
-
-.learnMore svg {
-  position: absolute;
-  bottom: 2em;
-
-  font-size: 2em;
-
-  color: var(--primaryFocus);
-  box-shadow: 1px 1px 2px 1px;
-  border-radius: 10px;
-
-  transition: all 200ms;
-}
-
-
-.learnMore svg:hover {
-  transform: translateY(10px);
-}
-
 /* ASIDE */
 
 .linksBar {
@@ -210,6 +188,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 1em;
 }
 
 .project a {
@@ -235,7 +214,7 @@ a {
   padding: 2em;
 }
 
-.project .description span {
+.project .description .titleButton {
   visibility: hidden;
   position: absolute;
   top: -999999;
@@ -245,6 +224,25 @@ a {
 .project .text a {
   visibility: hidden;
   position: absolute
+}
+
+
+.project .projTechs {
+  font-size: .8em;
+  color: var(--details);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project .projTechs span {
+  width: fit-content;
+  padding: .3em;
+  margin: 0 3px;
+  
+  border: 1px solid var(--details);
+  border-radius: 10px;
 }
 
 /* FOOTER */
@@ -270,7 +268,8 @@ footer p {
 @media (min-width: 1200px) {
   .nav ul {
     margin-bottom: 0;
-    width: 80%;
+    padding-right: 20%;
+
   }
 
   .hero {
@@ -284,6 +283,11 @@ footer p {
   .hero h2 {
     max-width: 100%;
     line-height:2;
+  }
+
+  .linksBar {
+    right: 12%;
+    top: 32%;
   }
 
   .sectionContent {
@@ -446,17 +450,17 @@ footer p {
     position: absolute;
     visibility: hidden;
     top: 99999;
-    left: 99999999;
+    left: 99999;
   }
   
-  .project .description span {
+  .project .description .titleButton {
     visibility: visible;
 
     padding: .5em;
-    width: 187px;
+    width: 190px;
 
     position: relative;
-    bottom: 23px;
+    bottom: 19px;
 
     text-decoration: none;
     background-color: var(--primaryFocusTranparent);
@@ -479,11 +483,8 @@ footer p {
 
   .text {
     visibility: hidden;
-
     position: absolute;
-
     margin-top: 0;
-
     transform: translateY(-20px);
   }
 
@@ -506,8 +507,6 @@ footer p {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
   }
 
   .textActive p {
@@ -520,7 +519,10 @@ footer p {
     visibility: visible;
     font-size: 1.4em;
     padding: 0 .8em;
+
+    text-align: right;
   }
+
 
   /* FOOTER */
 
@@ -546,7 +548,7 @@ footer p {
     font-size: 12px;
   }
 
-  .project .description span {
+  .project .description .textButton {
     width: 189px;
   
     position: relative;
