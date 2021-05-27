@@ -239,7 +239,7 @@ a {
 .project .projTechs span {
   width: fit-content;
   padding: .3em;
-  margin: 0 3px;
+  margin: 0 3px .8em 3px;
   
   border: 1px solid var(--details);
   border-radius: 10px;
