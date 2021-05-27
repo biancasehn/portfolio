@@ -7,6 +7,7 @@
   --details:#FF9B71;
   --lightText: #fff;
   --darkText: #000000;
+  --borders: #dadce0;
 }
 
 .App {
@@ -123,11 +124,9 @@ a {
   display: flex;
   flex-direction: row;
   align-items: right;
-
  
   padding: 2em 10em 2em 6em;
 }
-
 
 /* SECTION TITLES */
 
@@ -136,7 +135,7 @@ a {
   width: 28%;
   padding-right: 1em;
   margin-right: 1em;
-  border-right: 1px solid #dadce0;
+  border-right: 1px solid var(--borders);
 }
 
 /* SECTION CONTENT */
@@ -199,7 +198,7 @@ a {
 .project img {
   width: 200px;
   border-radius: 20px;
-  border: 1px solid #dadce0;
+  border: 1px solid var(--borders);
 
   transition: all 0.4s ease;
 
@@ -263,7 +262,7 @@ footer p {
   text-align: left;
 }
 
-/* SCREENS LARGER THAN 1200px */
+/* ----------------- SCREENS LARGER THAN 1200px ------------------ */
 
 @media (min-width: 1200px) {
   .nav ul {
@@ -295,7 +294,7 @@ footer p {
   }
 }
 
-/* SCREENS SMALLER THAN 1180px */
+/* ---------------- SCREENS SMALLER THAN 1180px ---------------------- */
 
 @media (max-width: 1180px) {
   .section {
@@ -327,7 +326,7 @@ footer p {
     padding: 0;
   }
 }
-/* MOBILE SCREENS - SMALLER THAN 769px */
+/* -------------------MOBILE SCREENS - SMALLER THAN 769px -------------------- */
 
 @media (max-width:769px) {
   .App {
@@ -412,7 +411,7 @@ footer p {
     align-content: center;
     padding: 1.5em 1.5em .8em 1.5em;
     border-right: none;
-    border-bottom: 1px solid #dadce0;
+    border-bottom: 1px solid var(--borders);
   }
 
   .sectionContent {
@@ -502,7 +501,7 @@ footer p {
     position: relative;
     transform: translateY(0px);
 
-    border: solid 1px #dadce0;
+    border: solid 1px var(--borders);
     border-radius: 10px;
 
     display: flex;
@@ -540,7 +539,7 @@ footer p {
   }
 }
 
-/* SCREENS SMALLER THAN 490px */
+/* ----------------- SCREENS SMALLER THAN 490px  ------------------- */
 
 @media (max-width: 490px) {
   .App {
@@ -556,8 +555,7 @@ footer p {
   }
 }
 
-
-
+/* ANIMATION */
 .animateSlideDown {
   transform: translateY(-35px);
   animation: slideDown 500ms forwards;

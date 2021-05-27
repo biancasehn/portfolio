@@ -1,45 +1,21 @@
 import './App.css';
 import { useState } from 'react';
 
+// UTILS - PROJECTS
+import { projects } from './utils/projects.js'
+
 //ICONS
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode, FaExternalLinkAlt } from 'react-icons/fa';
 import { MdEmail, MdExpandMore } from 'react-icons/md';
 import { SiJavascript } from 'react-icons/si';
-import {ReactComponent as Nextjs} from './nextjs-3.svg'
-import {ReactComponent as Expressjs} from './express-109.svg'
+import {ReactComponent as Nextjs} from './icons/nextjs-3.svg'
+import {ReactComponent as Expressjs} from './icons/express-109.svg'
 
-//IMAGES
+//IMAGE
 import myPhoto from './images/photo.jpg'
-import faceDetector from './images/face_detector.png';
-import shoppingList from './images/shopping_list.png';
-import dominandoAutocad from './images/dominando_autocad.png';
 
 function App() {
   
-  const projects = [
-    {
-      name: "Face Detector",
-      link: "https://facedetector.vercel.app/",
-      image: faceDetector,
-      description: "Final project for my Web Development course. A web application that allows users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.",
-      techs: ["Nextjs", "Nodejs", "Express", "Postgres", ]
-    },
-    {
-      name: "Shopping List",
-      link: "https://shoppinglist-application.herokuapp.com/",
-      image: shoppingList,
-      description: "Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the list.",
-      techs: ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "SQLite", ]
-    },
-    {
-      name: "Landing Page",
-      link: "https://dominandoautocad.com/",
-      image: dominandoAutocad,
-      description: "AutoCAD course landing page, bridge between the advertisement and the course purchase page, where the user is able to check information about the course.",
-      techs: ["React", "CSS"]
-    },
-  ]
-
   const [displayDescription, setDisplayDescription] = useState({
     0:false,
     1:false,
@@ -54,7 +30,6 @@ function App() {
     })
   }
    
-
   return (
     <div className="App">
       
@@ -79,23 +54,17 @@ function App() {
         </div>
       </div>
       
-      {/* CONTACT LINKS */}
+      {/* CONTACT LINKS BAR*/}
       <div className="linksBar animateSlideDown">
         <ul>
           <li>
-            <a 
-            href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/>
-            </a>
+            <a href="https://github.com/biancasehn" target="_blank" rel="noreferrer"><FaGithub className="icons"/></a>
           </li>
           <li>
-            <a 
-            href="https://www.linkedin.com/in/bianca-sehn-95b72b140/" target="_blank" rel="noreferrer"><FaLinkedin className="icons"/>
-            </a>
+            <a href="https://www.linkedin.com/in/bianca-sehn-95b72b140/" target="_blank" rel="noreferrer"><FaLinkedin className="icons"/></a>
           </li>
           <li>
-            <a 
-            href="mailto:bianca_sehn@hotmail.com" target="_blank" rel="noreferrer"><MdEmail className="icons"/>
-            </a>
+            <a href="mailto:bianca_sehn@hotmail.com" target="_blank" rel="noreferrer"><MdEmail className="icons"/></a>
           </li>
         </ul>
       </div>
@@ -138,15 +107,18 @@ function App() {
       <div className="section">
         <h2 className="sectionTitle">PROJECTS</h2>
         <div className="projects sectionContent" id="projects">
-
+          {/* PROJECT */}
           {projects.map((project, i) => (
             <div className="project" key={i}>
               <a href={project.link} target="_blank" rel="noreferrer"><img alt="facedetector" src={project.image}></img></a> 
+              {/* DESCRIPTION */}
               <div className="description">
+                {/* Project title desktop version */}
                 <a className="titleAnchor" href={project.link} target="_blank" rel="noreferrer">{project.name}</a> 
+                {/* Project title mobile version */}
                 <span class="titleButton" id={i} onClick={handleDescription}>
-                {project.name}
-                < MdExpandMore className={displayDescription[i] ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
+                  {project.name}
+                  < MdExpandMore className={displayDescription[i] ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
                 </span>
                 <div className={displayDescription[i] ? "text transformText textActive" : "text transform"}>
                   <p>{project.description}</p>
