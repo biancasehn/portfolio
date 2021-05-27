@@ -268,7 +268,7 @@ footer p {
 @media (min-width: 1200px) {
   .nav ul {
     margin-bottom: 0;
-    padding-right: 20%;
+    padding-right: 15%;
 
   }
 
@@ -286,7 +286,7 @@ footer p {
   }
 
   .linksBar {
-    right: 12%;
+    right: 5%;
     top: 32%;
   }
 
