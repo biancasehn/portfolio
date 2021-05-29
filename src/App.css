@@ -475,10 +475,13 @@ footer p {
   .chevronProject  {
     font-size: 1.5em;
     transform: rotate(0deg);
+    transition: transform 500ms ease;
+
   }
 
-  .rotate{
-    transform: rotate(180deg);
+  .rotate {
+    transform: rotate(180deg) ;
+    transition: transform 500ms ease;
   }
 
   .text {
@@ -486,20 +489,13 @@ footer p {
     position: absolute;
     margin-top: 0;
     transform: translateY(-20px);
-  }
-
-  .transformText {
-    -webkit-transition: transform 500ms ease;  
-    -moz-transition: transform 500ms ease;  
-    -o-transition: transform 500ms ease;  
-    -ms-transition: transform 500ms ease;  
     transition: transform 500ms ease;
   }
 
   .textActive {
     visibility: visible;
-
     position: relative;
+
     transform: translateY(0px);
 
     border: solid 1px var(--borders);

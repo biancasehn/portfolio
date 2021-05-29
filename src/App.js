@@ -118,9 +118,9 @@ function App() {
                 {/* Project title mobile version */}
                 <span class="titleButton" id={i} onClick={handleDescription}>
                   {project.name}
-                  < MdExpandMore className={displayDescription[i] ? "chevronProject transformText rotate" : "chevronProject transformText"}/>
+                  < MdExpandMore className={displayDescription[i] ? "chevronProject rotate" : "chevronProject"}/>
                 </span>
-                <div className={displayDescription[i] ? "text transformText textActive" : "text transform"}>
+                <div className={displayDescription[i] ? "text textActive" : "text"}>
                   <p>{project.description}</p>
                   <div className="projTechs">
                     {project.techs.map((tech, i) => (
