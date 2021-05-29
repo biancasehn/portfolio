@@ -42,12 +42,12 @@ function App() {
         </ul>
       </nav>
       
-      {/* HERO */}
-      <div className="hero animateSlideDown">
-        <div className="heroText">
+      {/* INTRO */}
+      <div className="intro animateSlideDown">
+        <div className="introText">
           <h1>Hi! Nice to see you here!</h1>
           <h2>
-            I’m <span style={{color:"var(--primaryFocus)", fontSize:"1.2em", fontWeight:"bold"}}>Bianca Sehn</span>, a web developer passionate about creating designs and building web applications. Currently based in Budapest, Hungary, but open for new adventures.
+            I’m <span style={{color:"var(--primaryFocus)", fontSize:"1.2em", fontWeight:"bold"}}>Bianca Sehn</span>, self-taught Brazilian web developer passionate about front-end development. Based in Budapest, Hungary, but open for new adventures.
           </h2>
           {/* <img alt="CV">Download my CV</img> */}
           <a>Download my CV</a>
@@ -77,10 +77,10 @@ function App() {
             <img alt="myphoto" src={myPhoto} style={{maxWidth: "250px", borderRadius:"50%"}}/>
           </div>
           <h3>
-            I am a Brazilian self-taught web developer with background in Electrical Engineering, that rediscovered her passion about programming during the pandemic.
+            I am a web developer with a background in Electrical Engineering, that rediscovered her passion about programming while looking for ways to continue developing skills during the pandemic.
             <br/>
             <br/>
-            I love to learn new stuff and I spend most of my free time studying web development, designing and building applications.
+            I love learning new stuff and I spend most of my free time studying web development, designing and building applications.
             <br/>
             <br/>
             When I am not studying, you can probably find me watching movies or planning my next trip.

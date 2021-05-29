@@ -56,9 +56,9 @@ a {
   text-decoration:underline;
 }
 
-/* HERO */
+/* INTRO */
 
-.hero {
+.intro {
   position: relative;
 
   min-height: 80vh;
@@ -74,11 +74,11 @@ a {
   line-height: 2.3em;
 }
 
-.heroText {
+.introText {
   max-width: 80%;
 }
 
-.hero h2 {
+.intro h2 {
   max-width: 70%;
   line-height:1.7;
 }
@@ -271,15 +271,15 @@ footer p {
 
   }
 
-  .hero {
+  .intro {
     margin-left: 7%;
   }
   
-  .heroText {
+  .introText {
     max-width: min(55%, 700px);
   }
   
-  .hero h2 {
+  .intro h2 {
     max-width: 100%;
     line-height:2;
   }
@@ -340,19 +340,19 @@ footer p {
   padding: 1em 2em;
   }
 
-  /* HERO */
-  .hero {
+  /* intro */
+  .intro {
   align-items: center;
   padding: 0 5.5em 5.5em;
 
   min-height: 90vh;
   }
 
-  .heroText {
+  .introText {
     max-width: 100%;
   }
 
-  .hero h2 {
+  .intro h2 {
     max-width: 100%;
     line-height:1.7;
   }
