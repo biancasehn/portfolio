@@ -14,6 +14,8 @@ import {ReactComponent as Expressjs} from './icons/express-109.svg'
 //IMAGE
 import myPhoto from './images/photo.jpg'
 
+import CV from './CV.pdf'
+
 function App() {
   
   const [displayDescription, setDisplayDescription] = useState({
@@ -49,8 +51,7 @@ function App() {
           <h2>
             I’m <span style={{color:"var(--primaryFocus)", fontSize:"1.2em", fontWeight:"bold"}}>Bianca Sehn</span>, self-taught Brazilian web developer passionate about front-end development. Based in Budapest, Hungary, but open for new adventures.
           </h2>
-          {/* <img alt="CV">Download my CV</img> */}
-          <a>Download my CV</a>
+          <a alt="CV" href={CV} target="_blank" rel="noopener noreferrer">Download my CV</a>
         </div>
       </div>
       
