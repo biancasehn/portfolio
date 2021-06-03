@@ -12,7 +12,7 @@ const projects = [
     },
     {
     name: "Shopping List",
-    link: "https://shoppinglist-application.herokuapp.com/",
+    link: "https://shoppinglist-application-v2.herokuapp.com/",
     image: shoppingList,
     description: "Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the entire list.",
     techs: ["JavaScript","HTML", "CSS", "EJS", "Nodejs", "Express", "SQLite", ]
