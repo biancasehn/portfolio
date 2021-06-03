@@ -123,9 +123,9 @@ a {
 .section {
   display: flex;
   flex-direction: row;
-  align-items: right;
 
-  padding: 2em 10em 2em 6em;
+  /* min-height: 80vh; */
+  padding: 6em 10em 6em 6em;
 }
 
 /* SECTION TITLES */
@@ -173,7 +173,8 @@ a {
   justify-content: center;
   align-items: center;
 
-  max-width: 60%;
+  max-width: 50%;
+  max-height: fit-content;
 }
 
 .tech h1 {
@@ -269,7 +270,6 @@ footer p {
   .nav ul {
     margin-bottom: 0;
     padding-right: 15%;
-
   }
 
   .intro {
@@ -293,13 +293,21 @@ footer p {
   .sectionContent {
     max-width: 680px;
   }
+
+  .section {
+    min-height: auto;
+  }
+
+  .tech {
+    max-width: min(50%, 680px);
+  }
 }
 
 /* ---------------- SCREENS SMALLER THAN 1180px ---------------------- */
 
 @media (max-width: 1180px) {
   .section {
-    padding: 2em 6em;
+    padding: 5em 6em;
   }
   
   /* CHANGING EACH PROJECT TO COLUMN DIRECTION */
@@ -327,7 +335,7 @@ footer p {
     padding: 0;
   }
 }
-/* -------------------MOBILE SCREENS - SMALLER THAN 769px -------------------- */
+/* ------------------- TABLET/MOBILE SCREENS - SMALLER THAN 769px -------------------- */
 
 @media (max-width:769px) {
   .App {

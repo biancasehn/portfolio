@@ -117,7 +117,7 @@ function App() {
                 {/* Project title desktop version */}
                 <a className="titleAnchor" href={project.link} target="_blank" rel="noreferrer">{project.name}</a> 
                 {/* Project title mobile version */}
-                <span class="titleButton" id={i} onClick={handleDescription}>
+                <span className="titleButton" id={i} onClick={handleDescription}>
                   {project.name}
                   < MdExpandMore className={displayDescription[i] ? "chevronProject rotate" : "chevronProject"}/>
                 </span>
