@@ -8,7 +8,7 @@ const projects = [
     link: "https://facedetector.vercel.app/",
     image: faceDetector,
     description: "Final project for my Web Development course. A web application that consumes Clarifai API, allowing users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.",
-    techs: ["JavaScript","Nextjs", "CSS", "Nodejs", "Express", "PostgreSQL", "Knex", ]
+    techs: ["JavaScript","Nextjs", "CSS", "Nodejs", "Express", "PostgreSQL", "NextAuth.js", "Knex", ]
     },
     {
     name: "Shopping List",
