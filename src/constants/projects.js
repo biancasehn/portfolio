@@ -1,8 +1,8 @@
-import faceDetector from '../images/face_detector.png';
-import shoppingList from '../images/shopping_list.png';
-import dominandoAutocad from '../images/dominando_autocad.png';
+import faceDetector from '../assets/images/face_detector.png';
+import shoppingList from '../assets/images/shopping_list.png';
+import dominandoAutocad from '../assets/images/dominando_autocad.png';
 
-const projects = [
+const PROJECTS = [
     {
     name: "Face Detector",
     link: "https://facedetector.vercel.app/",
@@ -26,4 +26,4 @@ const projects = [
     },
 ]
 
-export { projects };
+export { PROJECTS };

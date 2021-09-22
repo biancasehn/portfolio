@@ -2,19 +2,19 @@ import './App.css';
 import { useState } from 'react';
 
 // UTILS - PROJECTS
-import { projects } from './utils/projects.js'
+import { PROJECTS } from './constants/projects.js'
 
 //ICONS
 import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode, FaExternalLinkAlt } from 'react-icons/fa';
 import { MdEmail, MdExpandMore } from 'react-icons/md';
 import { SiJavascript } from 'react-icons/si';
-import {ReactComponent as Nextjs} from './icons/nextjs-3.svg'
-import {ReactComponent as Expressjs} from './icons/express-109.svg'
+import {ReactComponent as Nextjs} from './assets/icons/nextjs-3.svg'
+import {ReactComponent as Expressjs} from './assets/icons/express-109.svg'
 
 //IMAGE
-import myPhoto from './images/photo.jpg'
+import myPhoto from './assets/images/photo.jpg'
 
-import CV from './CV.pdf'
+import CV from './assets/pdf/CV.pdf'
 
 function App() {
   
@@ -109,7 +109,7 @@ function App() {
         <h2 className="sectionTitle">PROJECTS</h2>
         <div className="projects sectionContent" id="projects">
           {/* PROJECT */}
-          {projects.map((project, i) => (
+          {PROJECTS.map((project, i) => (
             <div className="project" key={i}>
               <a href={project.link} target="_blank" rel="noreferrer"><img alt="facedetector" src={project.image}></img></a> 
               {/* DESCRIPTION */}
