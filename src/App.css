@@ -2,20 +2,23 @@
   --mainColor: #fff;
   --primaryFocus: rgb(163, 56, 95);
   --primaryFocusTranparent: rgba(163, 56, 95, .7);
-  --secondaryFocus: rgb(154, 213, 202);
+  --secondaryFocus: #9ad5ca;
   --secondaryFocusTranparent: rgba(154, 213, 202, .6);
-  --details:#FF9B71;
+  --details:#4A7B9D;
   --lightText: #fff;
   --darkText: #000000;
   --borders: #dadce0;
 }
 
 .App {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
   position: relative;
 
   font-size: 15px;
   font-weight: bold;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -120,7 +123,7 @@ a {
 
 /* SECTIONS */
 
-.section {
+section {
   display: flex;
   flex-direction: row;
 
@@ -228,6 +231,8 @@ a {
 
 
 .project .projTechs {
+  font-family: 'Roboto', sans-serif;
+
   font-size: .8em;
   color: var(--details);
   
@@ -242,7 +247,7 @@ a {
   padding: .3em;
   margin: 0 3px .8em 3px;
   
-  border: 1px solid var(--details);
+  border: 1px solid;
   border-radius: 10px;
 }
 
@@ -294,7 +299,7 @@ footer p {
     max-width: 680px;
   }
 
-  .section {
+  section {
     min-height: auto;
   }
 
@@ -306,7 +311,7 @@ footer p {
 /* ---------------- SCREENS SMALLER THAN 1180px ---------------------- */
 
 @media (max-width: 1180px) {
-  .section {
+  section {
     padding: 5em 6em;
   }
   
@@ -402,7 +407,7 @@ footer p {
 
   /* SECTION */
 
-  .section {
+  section {
     position:relative;
 
     padding: 2em 5em;
