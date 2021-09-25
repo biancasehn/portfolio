@@ -10,20 +10,20 @@
   --borders: #dadce0;
 }
 
-.App {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.App {
   position: relative;
+
+  max-width: 100vw;
 
   font-size: 15px;
   font-weight: bold;
   overflow-x: hidden;
-}
-
-li {
-  padding: 1em;
 }
 
 a {
@@ -33,109 +33,20 @@ a {
   cursor:pointer;
 }
 
-/* NAV */
-
-.nav ul {
-  list-style-type: none;
-  font-size: .9em;
-  
-  margin-bottom: 0;
-  padding: 1em 8.5em;
-  
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.nav a {
-  text-decoration: none;
-  color: var(--darkText);
-
-  transition: 200ms;
-}
-
-.nav a:hover {
-  color: var(--primaryFocus);
-  text-decoration:underline;
-}
-
-/* INTRO */
-
-.intro {
-  position: relative;
-
-  min-height: 80vh;
-
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-
-  padding: 1em 8em 2em;
-
-  text-align: justify;
-  line-height: 2.3em;
-}
-
-.introText {
-  max-width: 80%;
-}
-
-.intro h2 {
-  max-width: 70%;
-  line-height:1.7;
-}
-
-/* LINKS BAR */
-
-.linksBar {
-  position: fixed;
-
-  z-index: 9999999;
-  right: 5%;
-  top: 32%;
-
-  background: var(--secondaryFocusTranparent);
-  border-radius: 10px;
-
-  transition: all .3s;
-}
-
-.linksBar ul {
-  list-style-type: none;
-  padding: 0;
-  display:block;
-}
-
-/* ICONS LINKS BAR */
-
-.linksBar .icons {
-  font-size: 2em;
-  color: black;
-
-  transition: all 0.2s;
-}
-
-.linksBar .icons:hover {
-  color: var(--details);
-  transform: scale(1.2);
-}
-
 /* SECTIONS */
-
 section {
   display: flex;
   flex-direction: row;
 
-  /* min-height: 80vh; */
-  padding: 6em 10em 6em 6em;
+  min-height: 80vh;
+  padding: 6em 5em 6em 2em;
 }
 
 /* SECTION TITLES */
 
-.sectionTitle {
+section .title {
   text-align: right;
-  width: 28%;
+  width: 25%;
   padding-right: 1em;
   margin-right: 1em;
   border-right: 1px solid var(--borders);
@@ -143,47 +54,11 @@ section {
 
 /* SECTION CONTENT */
 
-.sectionContent {
-  width: 72%;
-  line-height: 1.5;
+section .content {
+  width: 75%;
+  line-height: 1.7;
 }
 
-/* ABOUT ME*/
-
-.aboutMe {
-  background-color: var(--primaryFocus);
-  color: var(--lightText);
-}
-
-.myPhoto {
-  float: right;
-  padding: 0 0 1em 1em;
-}
-
-.aboutMe h3 {
-  shape-outside: circle();
-  text-align: left;
-}
-
-/* TECHNOLOGIES */
-
-.tech {
-  line-height: 0;
-  font-size: 2em;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
-  max-width: 50%;
-  max-height: fit-content;
-}
-
-.tech h1 {
-  padding: 0 .1em;
-  margin: 0.3em;
-}
 
 /* PROJECTS */
 
@@ -272,39 +147,13 @@ footer p {
 /* ----------------- SCREENS LARGER THAN 1200px ------------------ */
 
 @media (min-width: 1200px) {
-  .nav ul {
-    margin-bottom: 0;
-    padding-right: 15%;
-  }
 
-  .intro {
-    margin-left: 7%;
-  }
-  
-  .introText {
-    max-width: min(55%, 700px);
-  }
-  
-  .intro h2 {
-    max-width: 100%;
-    line-height:2;
-  }
-
-  .linksBar {
-    right: 5%;
-    top: 32%;
-  }
-
-  .sectionContent {
+  .content {
     max-width: 680px;
   }
 
   section {
     min-height: auto;
-  }
-
-  .tech {
-    max-width: min(50%, 680px);
   }
 }
 
@@ -315,8 +164,8 @@ footer p {
     padding: 5em 6em;
   }
   
-  /* CHANGING EACH PROJECT TO COLUMN DIRECTION */
-  .project, .project .description, .aboutMe .sectionContent {
+  /* CHANGING EACH SECTION TO COLUMN DIRECTION */
+  .project, .project .description,.content {
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -330,7 +179,7 @@ footer p {
     margin-top: 0;
   }
 
-  .aboutMe .sectionContent {
+  .aboutMe .content {
     padding-right: 1.6em;
   }
 
@@ -348,61 +197,8 @@ footer p {
     padding-bottom: 151px;
   }
 
-  /* NAV */
-  .nav ul {
-  justify-content: center;
-  padding: 1em 2em;
-  }
-
-  /* intro */
-  .intro {
-  align-items: center;
-  padding: 0 5.5em 5.5em;
-
-  min-height: 90vh;
-  }
-
-  .introText {
-    max-width: 100%;
-  }
-
-  .intro h2 {
-    max-width: 100%;
-    line-height:1.7;
-  }
-
   .learnMore {
     visibility: hidden;
-  }
-
-  /* LINKS BAR */
-
-  .linksBar {
-    font-size: 1.4em;
-
-    background: hsl(169, 41%, 72%, 0.8);
-    border-radius: 5px 5px 0 0;
-
-    position: fixed;
-    top: auto;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  }
-
-  .linksBar ul {
-    margin: 0;
-    padding: 0;
-
-    list-style-type: none;
-    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  .linksBar .icons:active {
-    color: var(--details);
   }
 
   /* SECTION */
@@ -418,7 +214,7 @@ footer p {
     align-items: center;
   }
 
-  .sectionTitle {
+  section .title {
     width: auto;
     margin:0;
     
@@ -428,16 +224,10 @@ footer p {
     border-bottom: 1px solid var(--borders);
   }
 
-  .sectionContent {
+  section .content {
     width: auto;
     text-align: justify;
     padding: 1em 0 0 0;
-  }
-
-  /* TECHNOLOGIES */
-
-  .tech {
-    max-width: 100%;
   }
 
   /* PROJECTS */

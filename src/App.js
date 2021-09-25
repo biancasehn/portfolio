@@ -6,7 +6,7 @@ import Home from './screens/home'
 function App() {
    
   return (
-    <div className="App">
+    <div className="App animateSlideDown">
       <Home />
       <footer>
           <p>Designed and developed</p>

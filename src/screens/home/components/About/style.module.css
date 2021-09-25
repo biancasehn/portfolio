@@ -1,0 +1,30 @@
+.about {
+    background-color: var(--primaryFocus);
+    color: var(--lightText);
+  }
+  
+  .myPhoto {
+    float: right;
+  }
+  
+  .about h3 {
+    shape-outside: circle();
+    text-align: left;
+  }
+
+  @media (max-width: 1180px) {
+    .about{
+        display: flex;
+        align-content: center;
+        text-align: left;
+        justify-content: center;
+
+        padding-right: 5em;
+    }
+
+    .myPhoto {
+        float: none;
+        text-align: center;
+        padding: 0;
+      }
+}

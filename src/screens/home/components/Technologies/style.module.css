@@ -1,0 +1,19 @@
+.tech {
+    line-height: 0;
+    font-size: 2em;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 50%;
+
+    margin: 0 25%;
+    /* max-height: fit-content; */
+}
+
+.tech h1 {
+    padding: 0 .1em;
+    margin: 0.3em;
+}

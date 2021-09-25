@@ -1,3 +1,5 @@
+import './style.css';
+
 import { useState } from 'react';
 
 import { PROJECTS } from '../../../../constants/projects.js'
@@ -24,8 +26,8 @@ function Projects() {
       
     return (
         <section>
-            <h2 className="sectionTitle">PROJECTS</h2>
-            <div className="projects sectionContent" id="projects">
+            <h2 className="title">PROJECTS</h2>
+            <div className="projects content" id="projects">
                 {/* PROJECT */}
                 {PROJECTS.map((project, i) => (
                     <div className="project" key={i}>

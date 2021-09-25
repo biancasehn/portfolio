@@ -1,3 +1,5 @@
+import './style.css';
+
 import Nav from './components/Nav/nav.js'
 import Intro from './components/Intro/intro.js'
 import LinksBar from './components/LinksBar/linksBar.js'
@@ -7,7 +9,7 @@ import Projects from './components/Projects/projects.js'
 
 function Home () {
     return(
-        <div>
+        <div className="container">
             <Nav />
             <Intro />
             <LinksBar />
