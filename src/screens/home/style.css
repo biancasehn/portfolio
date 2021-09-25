@@ -1,3 +1,82 @@
-.container {
-    position: relative
+section {
+    display: flex;
+    flex-direction: row;
+  
+    min-height: 80vh;
+    padding: 6em 5em 6em 2em;
+}
+  
+section .title {
+    text-align: right;
+    width: 25%;
+    padding-right: 1em;
+    margin-right: 1em;
+    border-right: 1px solid var(--borders);
+}
+  
+section .content {
+    width: 75%;
+    line-height: 1.7;
+}
+
+  /* ----------------- SCREENS LARGER THAN 1200px ------------------ */
+
+@media (min-width: 1200px) {
+    section {
+      min-height: auto;
+    }
+  
+    section .content {
+      max-width: 680px;
+    }
+}
+  
+  /* ---------------- SCREENS SMALLER THAN 1180px ---------------------- */
+  
+  @media (max-width: 1180px) {
+    section {
+      padding: 5em 6em;
+    }
+    
+    /* changing sections to column direction */
+    section .content {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      text-align: left;
+      justify-content: center;
+  
+      padding-right: 1.6em;
+    }
+}
+
+  /* ------------------- TABLET/MOBILE SCREENS - SMALLER THAN 769px -------------------- */
+
+@media (max-width:769px) {
+    section {
+      position:relative;
+  
+      padding: 2em 5em;
+  
+      /* titles to be above the section */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section .title {
+      width: auto;
+      margin:0;
+      
+      align-content: center;
+      padding: 1.5em 1.5em .8em 1.5em;
+      border-right: none;
+      border-bottom: 1px solid var(--borders);
+    }
+  
+    section .content {
+      width: auto;
+      text-align: justify;
+      padding: 1em 0 0 0;
+    }
 }

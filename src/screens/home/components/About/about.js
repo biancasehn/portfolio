@@ -5,7 +5,7 @@ function About () {
     return (
       <section className={style.about} id="about">
         <h2 className="title">ABOUT ME</h2>
-        <div className="content">
+        <main className="content">
           <div className={style.myPhoto}>
             <img alt="myphoto" title="My photo" src={myPhoto} style={{maxWidth: "250px", borderRadius:"50%"}} loading="lazy"/>
           </div>
@@ -18,7 +18,7 @@ function About () {
               <br/>
               When I am not studying, you can probably find me watching movies or planning my next trip.
             </h3>
-        </div>
+        </main>
       </section>
     )
 }

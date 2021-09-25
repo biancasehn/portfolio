@@ -1,9 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&display=swap');
-body,html {
+
+body, html {
   scroll-behavior: smooth;
   margin: 0;
   width: 100%;
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+--mainColor: #fff;
+--primaryFocus: rgb(163, 56, 95);
+--primaryFocusTranparent: rgba(163, 56, 95, .7);
+--secondaryFocus: #9ad5ca;
+--secondaryFocusTranparent: rgba(154, 213, 202, .6);
+--details:#4A7B9D;
+--lightText: #fff;
+--darkText: #000000;
+--borders: #dadce0;
 }

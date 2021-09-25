@@ -1,9 +1,9 @@
 .bar {
   position: fixed;
 
-  z-index: 9999999;
-  right: 18vw;
-  top: 40vh;
+  z-index: 1;
+  right: 0vw;
+  top: 30vh;
 
   background: var(--secondaryFocusTranparent);
   box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15%);
@@ -38,9 +38,11 @@
     left: 0;
   }
 
-  .bar ul {
-    margin: 0;
-    
+  .bar li {
+    padding: 0;
+  }
+  
+  .bar ul {    
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -50,7 +52,7 @@
     font-size: 2.2em;
   }
 
-.bar .icons:active {
+  .bar .icons:active {
     color: var(--details);
   }
 }

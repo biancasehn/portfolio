@@ -1,0 +1,32 @@
+footer {
+    background: var(--secondaryFocus);
+  
+    padding: .8em 6em .6em;
+    height: 10vh;
+  
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  footer p {
+    margin: 0;
+    text-align: left;
+  }
+
+@media (max-width: 769px) {
+  footer {
+    position: absolute;
+    right: 0;
+    left: 0;
+
+    bottom: 6em;
+
+    padding: 1em 2em;
+    height: auto;
+
+    background: var(--primaryFocus);
+    color: var(--lightText);
+  }
+
+}

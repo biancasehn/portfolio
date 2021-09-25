@@ -6,16 +6,18 @@ import LinksBar from './components/LinksBar/linksBar.js'
 import About from './components/About/about.js'
 import Technologies from './components/Technologies/technologies.js'
 import Projects from './components/Projects/projects.js'
+import Footer from '../components/Footer/footer.js'
 
 function Home () {
     return(
-        <div className="container">
+        <div>
             <Nav />
             <Intro />
             <LinksBar />
             <About />
             <Technologies />
             <Projects />
+            <Footer />
         </div>
     )
 }

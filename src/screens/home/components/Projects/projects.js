@@ -1,6 +1,6 @@
-import './style.css';
+import style from './style.module.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { PROJECTS } from '../../../../constants/projects.js'
 
@@ -15,7 +15,12 @@ const initialState = PROJECTS.map((project, i) => {
 function Projects() {
 
     const [displayDescription, setDisplayDescription] = useState(initialState);
+    const [screenSize, setScreenSize] = useState(window.innerWidth)
   
+    useEffect(() => {
+        window.addEventListener("resize", () => setScreenSize(window.innerWidth))
+    })
+
     const handleDescription = (event) => {
         const id = Number(event.target.id)
         setDisplayDescription({
@@ -23,39 +28,47 @@ function Projects() {
             [id]: !displayDescription[id]
         })
     }
-      
+
     return (
-        <section>
+        <section className={style.projects}>
             <h2 className="title">PROJECTS</h2>
-            <div className="projects content" id="projects">
+            <main className="content" id="projects">
                 {/* PROJECT */}
                 {PROJECTS.map((project, i) => (
-                    <div className="project" key={i}>
-                        <a href={project.link} target="_blank" rel="noreferrer"><img alt={project.name} title={project.name} src={project.image}></img></a> 
-                        {/* DESCRIPTION */}
-                        <div className="description">
-                            {/* Project title desktop version */}
-                            <a className="titleAnchor" href={project.link} target="_blank" rel="noreferrer">{project.name}</a> 
-                            {/* Project title mobile version */}
-                            <span className="titleButton" id={i} onClick={handleDescription}>
-                                {project.name}
-                                < MdExpandMore className={displayDescription[i] ? "chevronProject rotate" : "chevronProject"}/>
-                            </span>
-                            <div className={displayDescription[i] ? "text textActive" : "text"}>
-                                <p>{project.description}</p>
-                                <div className="projTechs">
+                    <div className={style.project} key={i}>
+                        <a className={style.image} href={project.link} target="_blank" rel="noreferrer"><img alt={project.name} title={project.name} src={project.image}></img></a> 
+                        {/* PROJECT INFO */}
+                        <div className={style.projectInfo}>
+                            {
+                                (screenSize > 768) ?
+                                // PROJECT TITLE desktop version
+                                <a className={style.titleDesktop} href={project.link} target="_blank" rel="noreferrer">{project.name}</a> 
+                                :
+                                // PROJECT TITLE mobile version
+                                    <button id={i} onClick={handleDescription}>
+                                        {project.name}
+                                        <MdExpandMore className={displayDescription[i] ? style.chevron0Deg : style.chevron180Deg}/>
+                                    </button>
+                            }
+                            <div className={displayDescription[i] ? style.toggleDescriptionOn : style.toggleDescriptionOff}>
+                                <p className={style.description}>{project.description}</p>
+                                <div className={style.techs}>
                                     {project.techs.map((tech, i) => (
                                     <span key={i}>
                                         {tech}
                                     </span>
                                     ))}
                                 </div>
-                                <a href={project.link}>< FaExternalLinkAlt /></a>
+                                {
+                                    (screenSize < 768) ?
+                                    <a className={style.redirect} href={project.link}>< FaExternalLinkAlt /></a>
+                                    : <div></div>
+                                }
                             </div>
                         </div>
                     </div>
                 ))}
-            </div>
+            </main>
         </section>
     )
 }

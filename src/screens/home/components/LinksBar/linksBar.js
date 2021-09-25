@@ -5,7 +5,6 @@ import { MdEmail } from 'react-icons/md';
 
 function LinksBar() {
   return(
-    <div className={style.container}>
         <main className={style.bar}>
           <ul>
             <li>
@@ -19,7 +18,6 @@ function LinksBar() {
             </li>
           </ul>
       </main>
-    </div>
   )
 }
 
