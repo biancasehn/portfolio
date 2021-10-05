@@ -1,5 +1,5 @@
 import style from './style.module.css';
-import CV from '../../../../assets/pdf/CV.pdf'
+import CV from 'assets/pdf/CV.pdf'
 
 function Intro() {
   return (

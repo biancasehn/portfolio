@@ -1,8 +1,8 @@
 import style from './style.module.css';
 
 import { SiJavascript } from 'react-icons/si';
-import {ReactComponent as Nextjs} from '../../../../assets/icons/nextjs-3.svg'
-import {ReactComponent as Expressjs} from '../../../../assets/icons/express-109.svg'
+import {ReactComponent as Nextjs} from 'assets/icons/nextjs-3.svg'
+import {ReactComponent as Expressjs} from 'assets/icons/express-109.svg'
 import { FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaNode } from 'react-icons/fa';
 
 function Technologies() {

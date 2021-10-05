@@ -1,5 +1,5 @@
 import style from './style.module.css';
-import myPhoto from '../../../../assets/images/photo.jpg'
+import myPhoto from 'assets/images/photo.jpg'
 
 function About () {
     return (

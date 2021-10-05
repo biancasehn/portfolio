@@ -2,7 +2,7 @@ import style from './style.module.css';
 
 import { useEffect, useState } from 'react';
 
-import { PROJECTS } from '../../../../constants/projects.js'
+import { PROJECTS } from 'constants/projects.js'
 
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { MdExpandMore } from 'react-icons/md';;
@@ -19,6 +19,7 @@ function Projects() {
   
     useEffect(() => {
         window.addEventListener("resize", () => setScreenSize(window.innerWidth))
+        return () => window.removeEventListener("resize", () => setScreenSize(window.innerWidth))
     })
 
     const handleDescription = (event) => {
