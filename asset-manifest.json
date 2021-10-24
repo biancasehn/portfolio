@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.be60e428.chunk.css",
-    "main.js": "/portfolio/static/js/main.3516cbd0.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.3516cbd0.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.3bfc851b.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.3bfc851b.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.6ccb3e03.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.6ccb3e03.js.map",
     "static/js/2.81e2d6b1.chunk.js": "/portfolio/static/js/2.81e2d6b1.chunk.js",
@@ -16,12 +16,12 @@
     "static/media/face_detector.0fdc8dd5.png": "/portfolio/static/media/face_detector.0fdc8dd5.png",
     "static/media/nextjs-3.7ab4af8b.svg": "/portfolio/static/media/nextjs-3.7ab4af8b.svg",
     "static/media/photo.750da862.jpg": "/portfolio/static/media/photo.750da862.jpg",
-    "static/media/shopping_list.9d73dcfb.png": "/portfolio/static/media/shopping_list.9d73dcfb.png"
+    "static/media/shopping_list.208b458f.png": "/portfolio/static/media/shopping_list.208b458f.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6ccb3e03.js",
     "static/js/2.81e2d6b1.chunk.js",
     "static/css/main.be60e428.chunk.css",
-    "static/js/main.3516cbd0.chunk.js"
+    "static/js/main.3bfc851b.chunk.js"
   ]
 }
