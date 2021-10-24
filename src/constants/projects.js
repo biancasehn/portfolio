@@ -7,14 +7,14 @@ const PROJECTS = [
     name: "Face Detector",
     link: "https://facedetector.vercel.app/",
     image: faceDetector,
-    description: "Final project for my Web Development course. A web application that consumes Clarifai API, allowing users to detect faces in their pictures. Also possible to subscribe and keep track of the number of pictures sumbited successfully.",
+    description: "A web application that consumes Clarifai API, allowing users to detect faces in their pictures. Thanks to the database connection and authentication solution, it is also possible to sign up with your e-mail and keep track of the number of pictures sumbitted successfully.",
     techs: ["JavaScript","Nextjs", "CSS", "Nodejs", "Express", "PostgreSQL", "NextAuth.js", "Knex", ]
     },
     {
     name: "Shopping List",
     link: "https://shoppinglist-application-v2.herokuapp.com/",
     image: shoppingList,
-    description: "Simple web application for users to enter their shopping items. Users can also remove and cross out each item, as well as clear the entire list.",
+    description: "The classic shopping list, where users can enter, remove and cross out items, as well as clear the entire list. This app has responsive layout and a SQLite database connected, preventing the loss of information when refreshing the page.",
     techs: ["JavaScript","HTML", "CSS", "EJS", "Nodejs", "Express", "SQLite", ]
     },
     {
