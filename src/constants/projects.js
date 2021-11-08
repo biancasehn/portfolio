@@ -1,6 +1,7 @@
 import faceDetector from '../assets/images/face_detector.png';
+import memoryMatch from '../assets/images/memory_match.png';
 import shoppingList from '../assets/images/shopping_list.png';
-import dominandoAutocad from '../assets/images/dominando_autocad.png';
+import revolutClone from '../assets/images/revolut_clone.png';
 
 const PROJECTS = [
     {
@@ -11,6 +12,13 @@ const PROJECTS = [
     techs: ["JavaScript","Nextjs", "CSS", "Nodejs", "Express", "PostgreSQL", "NextAuth.js", "Knex", ]
     },
     {
+    name: "Memory Match Game",
+    link: "https://biancasehn.github.io/memory_match_V2/",
+    image: memoryMatch,
+    description: "The traditional Memory Match game, the user clicks on the cards to reveal them and match. An aside scoreboard shows the number of failed attempts, increasing it every time the user fails to match two cards. Zustand has been used as state-management solution.",
+    techs: ["React", "Zustand"]
+    },
+    {
     name: "Shopping List",
     link: "https://shoppinglist-application-v2.herokuapp.com/",
     image: shoppingList,
@@ -18,11 +26,11 @@ const PROJECTS = [
     techs: ["JavaScript","HTML", "CSS", "EJS", "Nodejs", "Express", "SQLite", ]
     },
     {
-    name: "Landing Page",
-    link: "https://dominandoautocad.com/",
-    image: dominandoAutocad,
-    description: "AutoCAD course landing page, built for a friend's project. The user is able to check information about the course and go to the purchase page.",
-    techs: ["React", "CSS"]
+    name: "Clone - Revolut page",
+    link: "https://biancasehn.github.io/revolut-clone/",
+    image: revolutClone,
+    description: "Clone of the Revolut landing page, this was a project for my Web Development course.",
+    techs: ["HTML", "CSS", "JavaScript"]
     },
 ]
 
