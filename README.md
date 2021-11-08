@@ -3,7 +3,7 @@
 This is my Web Developer portfolio, where I'll be collecting the projects worthy to show off. <br/>
 If you want to get to know a bit more about my jouney on Web Development, take a look at it! <br/>
 
-[Go to the Portfolio page](biancasehn.github.io/portfolio/) :arrow_upper_right:
+https://biancasehn.github.io/portfolio/ :arrow_upper_right:
 
 Feedbacks are more than welcome! :smile:
 
