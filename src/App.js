@@ -1,10 +1,7 @@
-import './App.css';
-
-//import COMPONENTS
-import Home from './screens/home'
+import "./App.css";
+import Home from "./pages/home";
 
 function App() {
-   
   return (
     <div className="App">
       <Home />

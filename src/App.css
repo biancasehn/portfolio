@@ -1,9 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .App {
   position: relative;
 
@@ -18,7 +12,7 @@ a {
   text-decoration: underline;
   color: var(--primaryFocus);
 
-  cursor:pointer;
+  cursor: pointer;
 }
 
 /* ------------------- TABLET/MOBILE SCREENS - SMALLER THAN 769px -------------------- */
